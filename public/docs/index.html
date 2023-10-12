@@ -1,0 +1,1758 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>wealthy-food Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/obsidian.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js"></script>
+
+    <style id="language-style">
+        /* starts out as display none and is replaced with js later  */
+                    body .content .bash-example code { display: none; }
+                    body .content .javascript-example code { display: none; }
+            </style>
+
+    <script>
+        var tryItOutBaseUrl = "http://localhost";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-4.25.0.js"></script>
+
+    <script src="../docs/js/theme-default-4.25.0.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+
+<a href="#" id="nav-button">
+    <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image"/>
+    </span>
+</a>
+<div class="tocify-wrapper">
+    
+            <div class="lang-selector">
+                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                    </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <div id="toc">
+                    <ul id="tocify-header-introduction" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="introduction">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-authenticating-requests" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authenticating-requests">
+                    <a href="#authenticating-requests">Authenticating requests</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-endpoints" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="endpoints">
+                    <a href="#endpoints">Endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-products">
+                                <a href="#endpoints-GETapi-products">GET api/products</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-products--id-">
+                                <a href="#endpoints-GETapi-products--id-">GET api/products/{id}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-products--id-">
+                                <a href="#endpoints-PUTapi-products--id-">PUT api/products/{id}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-products--id-">
+                                <a href="#endpoints-DELETEapi-products--id-">DELETE api/products/{id}</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+            </div>
+
+    <ul class="toc-footer" id="toc-footer">
+                    <li style="padding-bottom: 5px;"><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li style="padding-bottom: 5px;"><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+    </ul>
+
+    <ul class="toc-footer" id="last-updated">
+        <li>Last updated: October 12, 2023</li>
+    </ul>
+</div>
+
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<aside>
+    <strong>Base URL</strong>: <code>http://localhost</code>
+</aside>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+
+        <h1 id="authenticating-requests">Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        <h1 id="endpoints">Endpoints</h1>
+
+    
+
+                                <h2 id="endpoints-GETapi-products">GET api/products</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-products">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/products" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/products"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-products">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;current_page&quot;: 1,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 36,
+            &quot;code&quot;: &quot;000000000001&quot;,
+            &quot;status&quot;: &quot;trash&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:16&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0000000000017/vitoria-crackers&quot;,
+            &quot;creator&quot;: &quot;kiliweb&quot;,
+            &quot;created_t&quot;: 1529059080,
+            &quot;last_modified_t&quot;: 1697083885,
+            &quot;product_name&quot;: &quot;Vit&oacute;ria crackers&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;&quot;,
+            &quot;categories&quot;: &quot;&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;&quot;,
+            &quot;serving_quantity&quot;: &quot;&quot;,
+            &quot;nutriscore_score&quot;: &quot;&quot;,
+            &quot;nutriscore_grade&quot;: &quot;&quot;,
+            &quot;main_category&quot;: &quot;&quot;,
+            &quot;image_url&quot;: &quot;https://static.openfoodfacts.org/images/products/000/000/000/0017/front_fr.4.400.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 37,
+            &quot;code&quot;: &quot;000000000003&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:16&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0000000000031/cacao&quot;,
+            &quot;creator&quot;: &quot;isagoofy&quot;,
+            &quot;created_t&quot;: 1539464774,
+            &quot;last_modified_t&quot;: 1539464817,
+            &quot;product_name&quot;: &quot;Cacao&quot;,
+            &quot;quantity&quot;: &quot;130 g&quot;,
+            &quot;brands&quot;: &quot;&quot;,
+            &quot;categories&quot;: &quot;&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;&quot;,
+            &quot;serving_quantity&quot;: &quot;&quot;,
+            &quot;nutriscore_score&quot;: &quot;&quot;,
+            &quot;nutriscore_grade&quot;: &quot;&quot;,
+            &quot;main_category&quot;: &quot;&quot;,
+            &quot;image_url&quot;: &quot;https://static.openfoodfacts.org/images/products/000/000/000/0031/front_fr.3.400.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 38,
+            &quot;code&quot;: &quot;00000000000332798&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:16&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/000000000003327986/filetes-de-pollo-empanado&quot;,
+            &quot;creator&quot;: &quot;kiliweb&quot;,
+            &quot;created_t&quot;: 1574175736,
+            &quot;last_modified_t&quot;: 1574175737,
+            &quot;product_name&quot;: &quot;Filetes de pollo empanado&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;&quot;,
+            &quot;categories&quot;: &quot;&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;&quot;,
+            &quot;serving_quantity&quot;: &quot;&quot;,
+            &quot;nutriscore_score&quot;: &quot;&quot;,
+            &quot;nutriscore_grade&quot;: &quot;&quot;,
+            &quot;main_category&quot;: &quot;&quot;,
+            &quot;image_url&quot;: &quot;https://static.openfoodfacts.org/images/products/000/000/000/003327986/front_es.3.400.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 39,
+            &quot;code&quot;: &quot;000000000010&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:16&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0000000000100/moutarde-au-mout-de-raisin-courte-paille&quot;,
+            &quot;creator&quot;: &quot;del51&quot;,
+            &quot;created_t&quot;: 1444572561,
+            &quot;last_modified_t&quot;: 1444659212,
+            &quot;product_name&quot;: &quot; moutarde au mo&ucirc;t de raisin &quot;,
+            &quot;quantity&quot;: &quot;100g&quot;,
+            &quot;brands&quot;: &quot;courte paille&quot;,
+            &quot;categories&quot;: &quot;Epicerie, Condiments, Sauces, Moutardes&quot;,
+            &quot;labels&quot;: &quot;Delois france&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;courte paille&quot;,
+            &quot;ingredients_text&quot;: &quot;eau graines de t&eacute;guments de moutarde vinaigre de vin rouge sel vin rouge sucre   mo&ucirc;t de raisin (6.2%) oignons colorants extraits de carotte et extrait de paprika huile de tournesol son de moutarde sel (cette _moutarde_ uniquement disponible chez courte paille)&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;&quot;,
+            &quot;serving_quantity&quot;: &quot;&quot;,
+            &quot;nutriscore_score&quot;: &quot;18&quot;,
+            &quot;nutriscore_grade&quot;: &quot;d&quot;,
+            &quot;main_category&quot;: &quot;en:mustards&quot;,
+            &quot;image_url&quot;: &quot;https://static.openfoodfacts.org/images/products/000/000/000/0100/front.3.400.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 40,
+            &quot;code&quot;: &quot;0000000000111111111&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:16&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/00000000001111111111/sfiudwx-watt&quot;,
+            &quot;creator&quot;: &quot;openfoodfacts-contributors&quot;,
+            &quot;created_t&quot;: 1560020173,
+            &quot;last_modified_t&quot;: 1560020173,
+            &quot;product_name&quot;: &quot;Sfiudwx&quot;,
+            &quot;quantity&quot;: &quot;dgesc&quot;,
+            &quot;brands&quot;: &quot;Watt&quot;,
+            &quot;categories&quot;: &quot;Xsf&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;&quot;,
+            &quot;serving_quantity&quot;: &quot;&quot;,
+            &quot;nutriscore_score&quot;: &quot;&quot;,
+            &quot;nutriscore_grade&quot;: &quot;&quot;,
+            &quot;main_category&quot;: &quot;fr:xsf&quot;,
+            &quot;image_url&quot;: &quot;&quot;
+        },
+        {
+            &quot;id&quot;: 41,
+            &quot;code&quot;: &quot;000000000012&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:16&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0000000000123/sauce-sweety-chili-0&quot;,
+            &quot;creator&quot;: &quot;kiliweb&quot;,
+            &quot;created_t&quot;: 1535737982,
+            &quot;last_modified_t&quot;: 1535737986,
+            &quot;product_name&quot;: &quot;Sauce Sweety chili 0%&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;&quot;,
+            &quot;categories&quot;: &quot;&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;&quot;,
+            &quot;serving_quantity&quot;: &quot;&quot;,
+            &quot;nutriscore_score&quot;: &quot;&quot;,
+            &quot;nutriscore_grade&quot;: &quot;&quot;,
+            &quot;main_category&quot;: &quot;&quot;,
+            &quot;image_url&quot;: &quot;https://static.openfoodfacts.org/images/products/000/000/000/0123/front_fr.4.400.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 42,
+            &quot;code&quot;: &quot;000000000017&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:16&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0000000000178/mini-coco&quot;,
+            &quot;creator&quot;: &quot;kiliweb&quot;,
+            &quot;created_t&quot;: 1542456332,
+            &quot;last_modified_t&quot;: 1542456333,
+            &quot;product_name&quot;: &quot;Mini coco&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;&quot;,
+            &quot;categories&quot;: &quot;&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;&quot;,
+            &quot;serving_quantity&quot;: &quot;&quot;,
+            &quot;nutriscore_score&quot;: &quot;&quot;,
+            &quot;nutriscore_grade&quot;: &quot;&quot;,
+            &quot;main_category&quot;: &quot;&quot;,
+            &quot;image_url&quot;: &quot;https://static.openfoodfacts.org/images/products/000/000/000/0178/front_fr.4.400.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 43,
+            &quot;code&quot;: &quot;000000000020&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:16&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0000000000208/pistou-d-ail-des-ours&quot;,
+            &quot;creator&quot;: &quot;kiliweb&quot;,
+            &quot;created_t&quot;: 1544207680,
+            &quot;last_modified_t&quot;: 1544207683,
+            &quot;product_name&quot;: &quot;Pistou d&#039;ail des ours&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;&quot;,
+            &quot;categories&quot;: &quot;&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;&quot;,
+            &quot;serving_quantity&quot;: &quot;&quot;,
+            &quot;nutriscore_score&quot;: &quot;&quot;,
+            &quot;nutriscore_grade&quot;: &quot;&quot;,
+            &quot;main_category&quot;: &quot;&quot;,
+            &quot;image_url&quot;: &quot;https://static.openfoodfacts.org/images/products/000/000/000/0208/front_fr.4.400.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 44,
+            &quot;code&quot;: &quot;000000000028&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:16&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0000000000284/pain-mais&quot;,
+            &quot;creator&quot;: &quot;kiliweb&quot;,
+            &quot;created_t&quot;: 1547120245,
+            &quot;last_modified_t&quot;: 1563551052,
+            &quot;product_name&quot;: &quot;Pain ma&iuml;s&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;&quot;,
+            &quot;categories&quot;: &quot;&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;&quot;,
+            &quot;serving_quantity&quot;: &quot;&quot;,
+            &quot;nutriscore_score&quot;: &quot;&quot;,
+            &quot;nutriscore_grade&quot;: &quot;&quot;,
+            &quot;main_category&quot;: &quot;&quot;,
+            &quot;image_url&quot;: &quot;https://static.openfoodfacts.org/images/products/000/000/000/0284/front_fr.4.400.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 45,
+            &quot;code&quot;: &quot;000000000029&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:16&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0000000000291/mendiants&quot;,
+            &quot;creator&quot;: &quot;kiliweb&quot;,
+            &quot;created_t&quot;: 1534239669,
+            &quot;last_modified_t&quot;: 1534239732,
+            &quot;product_name&quot;: &quot;Mendiants&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;&quot;,
+            &quot;categories&quot;: &quot;&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;&quot;,
+            &quot;serving_quantity&quot;: &quot;&quot;,
+            &quot;nutriscore_score&quot;: &quot;&quot;,
+            &quot;nutriscore_grade&quot;: &quot;&quot;,
+            &quot;main_category&quot;: &quot;&quot;,
+            &quot;image_url&quot;: &quot;https://static.openfoodfacts.org/images/products/000/000/000/0291/front_fr.4.400.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 46,
+            &quot;code&quot;: &quot;0073490180286&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:31&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0073490180286/absolutely-gluten-free-classic-coconut-macaroons-toasted-coconut-royal-wine-corporation&quot;,
+            &quot;creator&quot;: &quot;usda-ndb-import&quot;,
+            &quot;created_t&quot;: 1489076300,
+            &quot;last_modified_t&quot;: 1587588249,
+            &quot;product_name&quot;: &quot;Absolutely, Gluten Free Classic Coconut Macaroons, Toasted Coconut&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;Royal Wine Corporation&quot;,
+            &quot;categories&quot;: &quot;Snacks, Sweet snacks, Biscuits and cakes, Biscuits, Pastries, Coconut Macaroons&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;Unsweetened sulfite free coconut, invert sugar, tapioca, egg whites.&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;2 MACAROONS (28 g)&quot;,
+            &quot;serving_quantity&quot;: &quot;28&quot;,
+            &quot;nutriscore_score&quot;: &quot;21&quot;,
+            &quot;nutriscore_grade&quot;: &quot;e&quot;,
+            &quot;main_category&quot;: &quot;en:coconut-macaroons&quot;,
+            &quot;image_url&quot;: &quot;&quot;
+        },
+        {
+            &quot;id&quot;: 47,
+            &quot;code&quot;: &quot;0073490180293&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:31&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0073490180293/absolutely-gluten-free-classic-coconut-macaroons-chocolate-royal-wine-corporation&quot;,
+            &quot;creator&quot;: &quot;usda-ndb-import&quot;,
+            &quot;created_t&quot;: 1489072556,
+            &quot;last_modified_t&quot;: 1587585642,
+            &quot;product_name&quot;: &quot;Absolutely Gluten Free, Classic Coconut Macaroons, Chocolate&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;Royal Wine Corporation&quot;,
+            &quot;categories&quot;: &quot;Snacks, Sweet snacks, Biscuits and cakes, Biscuits, Pastries, Coconut Macaroons&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;Unsweetened sulfite free coconut, invert sugar, tapioca, cocoa, egg whites, natural flavor.&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;2 MACRAROONS (28 g)&quot;,
+            &quot;serving_quantity&quot;: &quot;28&quot;,
+            &quot;nutriscore_score&quot;: &quot;21&quot;,
+            &quot;nutriscore_grade&quot;: &quot;e&quot;,
+            &quot;main_category&quot;: &quot;en:coconut-macaroons&quot;,
+            &quot;image_url&quot;: &quot;&quot;
+        },
+        {
+            &quot;id&quot;: 48,
+            &quot;code&quot;: &quot;0073490180408&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:31&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0073490180408/tahinibar-super-seed-energy-bar-vanilla&quot;,
+            &quot;creator&quot;: &quot;org-database-usda&quot;,
+            &quot;created_t&quot;: 1587666413,
+            &quot;last_modified_t&quot;: 1587666413,
+            &quot;product_name&quot;: &quot;Tahinibar super seed energy bar, vanilla&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;&quot;,
+            &quot;categories&quot;: &quot;Snacks&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;Tahini (roasted sesame seeds, salt), sugar, glucose syrup, vegetable oil (palm), mono &amp; diglycerides (emulsifier), soy lecithin (emulsifier), saponariae root extract (surfactant), natural flavor and citric acid (acidulant).&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;1 BAR (18 g)&quot;,
+            &quot;serving_quantity&quot;: &quot;18&quot;,
+            &quot;nutriscore_score&quot;: &quot;13&quot;,
+            &quot;nutriscore_grade&quot;: &quot;d&quot;,
+            &quot;main_category&quot;: &quot;en:snacks&quot;,
+            &quot;image_url&quot;: &quot;&quot;
+        },
+        {
+            &quot;id&quot;: 49,
+            &quot;code&quot;: &quot;0073490180422&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:31&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0073490180422/tahinibar&quot;,
+            &quot;creator&quot;: &quot;org-database-usda&quot;,
+            &quot;created_t&quot;: 1587665191,
+            &quot;last_modified_t&quot;: 1587665191,
+            &quot;product_name&quot;: &quot;Tahinibar&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;&quot;,
+            &quot;categories&quot;: &quot;Snacks&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;Tahini (roasted sesame seeds, salt), sugar, glucose syrup, cocoa beans, vegetable oil (palm), mono &amp; diglycerides (emulsifier), soy lecithin (emulsifier), saponariae root extract (surfactant), natural flavor and citric acid (acidulant).&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;1 BAR (18 g)&quot;,
+            &quot;serving_quantity&quot;: &quot;18&quot;,
+            &quot;nutriscore_score&quot;: &quot;12&quot;,
+            &quot;nutriscore_grade&quot;: &quot;d&quot;,
+            &quot;main_category&quot;: &quot;en:snacks&quot;,
+            &quot;image_url&quot;: &quot;&quot;
+        },
+        {
+            &quot;id&quot;: 50,
+            &quot;code&quot;: &quot;0073491001009&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;imported_t&quot;: &quot;2023-10-12 00:28:31&quot;,
+            &quot;url&quot;: &quot;http://world-en.openfoodfacts.org/product/0073491001009/original-recipe-rice-pudding-original-recipe-kozy-shack-enterprises-llc&quot;,
+            &quot;creator&quot;: &quot;usda-ndb-import&quot;,
+            &quot;created_t&quot;: 1489056813,
+            &quot;last_modified_t&quot;: 1587574102,
+            &quot;product_name&quot;: &quot;Original recipe rice pudding, original recipe&quot;,
+            &quot;quantity&quot;: &quot;&quot;,
+            &quot;brands&quot;: &quot;Kozy Shack Enterprises  Llc&quot;,
+            &quot;categories&quot;: &quot;Desserts&quot;,
+            &quot;labels&quot;: &quot;&quot;,
+            &quot;cities&quot;: &quot;&quot;,
+            &quot;purchase_places&quot;: &quot;&quot;,
+            &quot;stores&quot;: &quot;&quot;,
+            &quot;ingredients_text&quot;: &quot;Reduced fat milk, rice, sugar, contains less than 2% of eggs, salt, natural flavors.&quot;,
+            &quot;traces&quot;: &quot;&quot;,
+            &quot;serving_size&quot;: &quot;1 SNACK CUP (113 g)&quot;,
+            &quot;serving_quantity&quot;: &quot;113&quot;,
+            &quot;nutriscore_score&quot;: &quot;2&quot;,
+            &quot;nutriscore_grade&quot;: &quot;b&quot;,
+            &quot;main_category&quot;: &quot;en:desserts&quot;,
+            &quot;image_url&quot;: &quot;&quot;
+        }
+    ],
+    &quot;first_page_url&quot;: &quot;http://localhost/api/products?page=1&quot;,
+    &quot;from&quot;: 1,
+    &quot;last_page&quot;: 6,
+    &quot;last_page_url&quot;: &quot;http://localhost/api/products?page=6&quot;,
+    &quot;links&quot;: [
+        {
+            &quot;url&quot;: null,
+            &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/products?page=1&quot;,
+            &quot;label&quot;: &quot;1&quot;,
+            &quot;active&quot;: true
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/products?page=2&quot;,
+            &quot;label&quot;: &quot;2&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/products?page=3&quot;,
+            &quot;label&quot;: &quot;3&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/products?page=4&quot;,
+            &quot;label&quot;: &quot;4&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/products?page=5&quot;,
+            &quot;label&quot;: &quot;5&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/products?page=6&quot;,
+            &quot;label&quot;: &quot;6&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/products?page=2&quot;,
+            &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+            &quot;active&quot;: false
+        }
+    ],
+    &quot;next_page_url&quot;: &quot;http://localhost/api/products?page=2&quot;,
+    &quot;path&quot;: &quot;http://localhost/api/products&quot;,
+    &quot;per_page&quot;: 15,
+    &quot;prev_page_url&quot;: null,
+    &quot;to&quot;: 15,
+    &quot;total&quot;: 90
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-products" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-products"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-products"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-products" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-products">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-products" data-method="GET"
+      data-path="api/products"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-products', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-products"
+                    onclick="tryItOut('GETapi-products');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-products"
+                    onclick="cancelTryOut('GETapi-products');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-products"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/products</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-products"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-products"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-products--id-">GET api/products/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-products--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/products/36" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/products/36"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-products--id-">
+            <blockquote>
+            <p>Example response (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 58
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Product].&quot;,
+    &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException&quot;,
+    &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php&quot;,
+    &quot;line&quot;: 487,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php&quot;,
+            &quot;line&quot;: 463,
+            &quot;function&quot;: &quot;prepareException&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;render&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;render&quot;,
+            &quot;class&quot;: &quot;NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 143,
+            &quot;function&quot;: &quot;handleException&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 159,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 87,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 798,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 777,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 741,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 730,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 99,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 209,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 124,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 71,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 49,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 211,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/symfony/console/Command/Command.php&quot;,
+            &quot;line&quot;: 326,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 1081,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 320,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 174,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
+            &quot;line&quot;: 201,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/html/artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-products--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-products--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-products--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-products--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-products--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-products--id-" data-method="GET"
+      data-path="api/products/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-products--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-products--id-"
+                    onclick="tryItOut('GETapi-products--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-products--id-"
+                    onclick="cancelTryOut('GETapi-products--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-products--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/products/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-products--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-products--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="GETapi-products--id-"
+               value="36"
+               data-component="url">
+    <br>
+<p>The ID of the product. Example: <code>36</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="endpoints-PUTapi-products--id-">PUT api/products/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-PUTapi-products--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost/api/products/36" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"status\": \"trash\",
+    \"url\": \"https:\\/\\/casper.com\\/consectetur-est-optio-maxime.html\",
+    \"creator\": \"sint\",
+    \"product_name\": \"rerum\",
+    \"quantity\": \"corrupti\",
+    \"brands\": \"illo\",
+    \"categories\": \"alias\",
+    \"labels\": \"minus\",
+    \"cities\": \"et\",
+    \"purchase_places\": \"ab\",
+    \"stores\": \"velit\",
+    \"ingredients_text\": \"inventore\",
+    \"traces\": \"quo\",
+    \"serving_size\": \"consequatur\",
+    \"serving_quantity\": 9338,
+    \"nutriscore_score\": \"3s4nfj0\",
+    \"nutriscore_grade\": \"modi\",
+    \"main_category\": \"distinctio\",
+    \"image_url\": \"http:\\/\\/cole.com\\/\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/products/36"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "status": "trash",
+    "url": "https:\/\/casper.com\/consectetur-est-optio-maxime.html",
+    "creator": "sint",
+    "product_name": "rerum",
+    "quantity": "corrupti",
+    "brands": "illo",
+    "categories": "alias",
+    "labels": "minus",
+    "cities": "et",
+    "purchase_places": "ab",
+    "stores": "velit",
+    "ingredients_text": "inventore",
+    "traces": "quo",
+    "serving_size": "consequatur",
+    "serving_quantity": 9338,
+    "nutriscore_score": "3s4nfj0",
+    "nutriscore_grade": "modi",
+    "main_category": "distinctio",
+    "image_url": "http:\/\/cole.com\/"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-products--id-">
+</span>
+<span id="execution-results-PUTapi-products--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-products--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-products--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-PUTapi-products--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-products--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-PUTapi-products--id-" data-method="PUT"
+      data-path="api/products/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-products--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-products--id-"
+                    onclick="tryItOut('PUTapi-products--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-products--id-"
+                    onclick="cancelTryOut('PUTapi-products--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-products--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/products/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/products/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="PUTapi-products--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="PUTapi-products--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="PUTapi-products--id-"
+               value="36"
+               data-component="url">
+    <br>
+<p>The ID of the product. Example: <code>36</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="status"                data-endpoint="PUTapi-products--id-"
+               value="trash"
+               data-component="body">
+    <br>
+<p>Example: <code>trash</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>published</code></li> <li><code>trash</code></li> <li><code>draft</code></li></ul>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>url</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="url"                data-endpoint="PUTapi-products--id-"
+               value="https://casper.com/consectetur-est-optio-maxime.html"
+               data-component="body">
+    <br>
+<p>Must be a valid URL. Example: <code>https://casper.com/consectetur-est-optio-maxime.html</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>creator</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="creator"                data-endpoint="PUTapi-products--id-"
+               value="sint"
+               data-component="body">
+    <br>
+<p>Example: <code>sint</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>product_name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="product_name"                data-endpoint="PUTapi-products--id-"
+               value="rerum"
+               data-component="body">
+    <br>
+<p>Example: <code>rerum</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="quantity"                data-endpoint="PUTapi-products--id-"
+               value="corrupti"
+               data-component="body">
+    <br>
+<p>Example: <code>corrupti</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>brands</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="brands"                data-endpoint="PUTapi-products--id-"
+               value="illo"
+               data-component="body">
+    <br>
+<p>Example: <code>illo</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>categories</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="categories"                data-endpoint="PUTapi-products--id-"
+               value="alias"
+               data-component="body">
+    <br>
+<p>Example: <code>alias</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>labels</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="labels"                data-endpoint="PUTapi-products--id-"
+               value="minus"
+               data-component="body">
+    <br>
+<p>Example: <code>minus</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>cities</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="cities"                data-endpoint="PUTapi-products--id-"
+               value="et"
+               data-component="body">
+    <br>
+<p>Example: <code>et</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>purchase_places</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="purchase_places"                data-endpoint="PUTapi-products--id-"
+               value="ab"
+               data-component="body">
+    <br>
+<p>Example: <code>ab</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>stores</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="stores"                data-endpoint="PUTapi-products--id-"
+               value="velit"
+               data-component="body">
+    <br>
+<p>Example: <code>velit</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>ingredients_text</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="ingredients_text"                data-endpoint="PUTapi-products--id-"
+               value="inventore"
+               data-component="body">
+    <br>
+<p>Example: <code>inventore</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>traces</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="traces"                data-endpoint="PUTapi-products--id-"
+               value="quo"
+               data-component="body">
+    <br>
+<p>Example: <code>quo</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>serving_size</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="serving_size"                data-endpoint="PUTapi-products--id-"
+               value="consequatur"
+               data-component="body">
+    <br>
+<p>Example: <code>consequatur</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>serving_quantity</code></b>&nbsp;&nbsp;
+<small>number</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="serving_quantity"                data-endpoint="PUTapi-products--id-"
+               value="9338"
+               data-component="body">
+    <br>
+<p>Example: <code>9338</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>nutriscore_score</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="nutriscore_score"                data-endpoint="PUTapi-products--id-"
+               value="3s4nfj0"
+               data-component="body">
+    <br>
+<p>Must contain only letters and numbers. Example: <code>3s4nfj0</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>nutriscore_grade</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="nutriscore_grade"                data-endpoint="PUTapi-products--id-"
+               value="modi"
+               data-component="body">
+    <br>
+<p>Example: <code>modi</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>main_category</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="main_category"                data-endpoint="PUTapi-products--id-"
+               value="distinctio"
+               data-component="body">
+    <br>
+<p>Example: <code>distinctio</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>image_url</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="image_url"                data-endpoint="PUTapi-products--id-"
+               value="http://cole.com/"
+               data-component="body">
+    <br>
+<p>Must be a valid URL. Example: <code>http://cole.com/</code></p>
+        </div>
+        </form>
+
+                    <h2 id="endpoints-DELETEapi-products--id-">DELETE api/products/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-products--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost/api/products/36" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/products/36"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-products--id-">
+</span>
+<span id="execution-results-DELETEapi-products--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-products--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-products--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-products--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-products--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-DELETEapi-products--id-" data-method="DELETE"
+      data-path="api/products/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-products--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-products--id-"
+                    onclick="tryItOut('DELETEapi-products--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-products--id-"
+                    onclick="cancelTryOut('DELETEapi-products--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-products--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/products/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="DELETEapi-products--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="DELETEapi-products--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="DELETEapi-products--id-"
+               value="36"
+               data-component="url">
+    <br>
+<p>The ID of the product. Example: <code>36</code></p>
+            </div>
+                    </form>
+
+            
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                            </div>
+            </div>
+</div>
+</body>
+</html>
