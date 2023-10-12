@@ -49,7 +49,7 @@ services:
         image: mysql:8.1.0
         command: --default-authentication-plugin=mysql_native_password
         environment:
-            MYSQL_DATABASE: 'db'
+            MYSQL_DATABASE: 'devdb'
             MYSQL_ROOT_PASSWORD: ''
             MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
         ports:
